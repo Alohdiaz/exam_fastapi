@@ -10,16 +10,6 @@ next_id = 1
 async def read_root():
     return {"Hello": "World"}
 
-# @app.post("/customers/")
-# async def create_customer(customer: CustomerBase) -> CustomerCreate:
-#     customer = CustomerCreate(id=1, **customer.model_dump())
-#     return customer
-
-# @app.get("/list_customers/")
-# async def create_list_customers() -> list[CustomerCreate]:
-#         list_customers = [CustomerCreate]
-#         return list_customers
-
 @app.post("/customers/")
 async def create_customer(customer: CustomerBase) -> CustomerCreate:
     global next_id
